@@ -22,10 +22,11 @@ stages:
     - task: Checkout@1
       displayName: 'Checkout repository'
 
-    - task: UseTerraform@0
-      inputs:
-        terraformVersion: '1.0.0'
-      displayName: 'Set up Terraform'
+    - script: |
+        curl -LO https://releases.hashicorp.com/terraform/1.0.0/terraform_1.0.0_linux_amd64.zip
+        unzip terraform_1.0.0_linux_amd64.zip
+        sudo mv terraform /usr/local/bin/
+      displayName: 'Install Terraform'
 
     - script: |
         az login --identity
