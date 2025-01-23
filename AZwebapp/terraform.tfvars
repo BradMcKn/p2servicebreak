@@ -1,6 +1,0 @@
-location = "East US"
-resource_group_name = "project2-resources"
-tenant_id = "<your-tenant-id>"
-object_id = "<your-object-id>"
-sql_admin_password = "<your-sql-admin-password>"
-vm_admin_password = "<your-vm-admin-password>"
